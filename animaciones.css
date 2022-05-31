@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#header{
+	background-color: #fff;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #000;
+	z-index: 100;
+}
+
+.banner{
+	height: 100vh;
+	overflow: hidden;
+}
+
+@keyframes zoom{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+.banner img{
+	width: 100%;
+	animation-name: zoom;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 7s;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
+}
+
+.contenido{
+	padding: 20px;
+	padding-top: 100px;
+}
+
+.contenedor{
+	max-width: 1200px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item{
+	width: 33.33333%;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: all 250ms;
+}
+
+.item:hover{
+	transform: scale(1.1);
+}
+
+.item:hover img{
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+}
+
+.item img{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+
+/*OTRO EJEMPLO*/
+
+
+@keyframes anima{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(50px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+@keyframes rotando{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.fondo{
+	background-image: url('img/fondo.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+}
+.lipstick{
+	position: absolute;
+	width: 100px;
+	top: 200px;
+	left: 200px;
+}
+.lipstick img{
+	width: 100%;
+	animation-name: anima, rotando;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 5s, 25s;
+}
